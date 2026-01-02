@@ -2,7 +2,17 @@
 
 First five rows:
 
-    sepal_length  sepal_width  petal_length  petal_width species
+sl = sepal length
+
+sw = sepal width
+
+pl = petal length
+
+pw = petal width
+
+s = species
+
+             sl          sw            pl            pw    s
 
 0           5.1          3.5           1.4          0.2  setosa
 
