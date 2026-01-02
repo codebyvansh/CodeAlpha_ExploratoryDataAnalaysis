@@ -1,0 +1,32 @@
+#code for exploratory data analysis
+
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Step 1: Load dataset
+df = sns.load_dataset("iris")
+
+# Step 2: Display first records
+print("First five rows:\n", df.head())
+
+# Step 3: Dataset information
+print("\nDataset Info:")
+print(df.info())
+
+# Step 4: Summary statistics
+print("\nStatistical Summary:")
+print(df.describe())
+
+# Step 5: Check missing values
+print("\nMissing Values:\n", df.isnull().sum())
+
+# Step 6: Visualizations
+# Pairplot to check relationships
+sns.pairplot(df, hue="species")
+plt.show()
+
+# Boxplot for comparison
+sns.boxplot(x="species", y="sepal_length", data=df)
+plt.title("Sepal Length Variation Among Species")
+plt.show()
